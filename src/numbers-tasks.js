@@ -631,11 +631,8 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  const arr = [];
-  for (let i = 1; i <= number; i += 1) {
-    arr.push(i);
-  }
-  return arr.filter((item) => item % 2 === 1).length;
+  const absNumber = Math.abs(number);
+  return absNumber % 2 === 0 ? absNumber / 2 : Math.floor(absNumber / 2) + 1;
 }
 
 module.exports = {
